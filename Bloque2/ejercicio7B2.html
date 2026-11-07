@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Valores</title>
+</head>
+<body>
+    <script>
+        // Funciones-Leer
+        function valoresTabla () {
+            let num, numPar = 0, mul15 = 0, numPos = 0, numNeg = 0, cont = 1, mensaje = "";
+            do {
+                num = parseInt(prompt("Ingrese el número " + cont + " de 10:"));
+                if (num < 0) {
+                    numNeg++;
+                } else if (num > 0) {
+                    numPos++;
+                }
+                if (num % 15 === 0) {
+                    mul15++;
+                }
+                if (num % 2 === 0) {
+                    numPar += num;
+                }
+                cont++;
+            } while (cont <= 10);
+            mensaje += "Cantidad de negativos: " + numNeg + "<br>";
+            mensaje += "Cantidad de positivos: " + numPos + "<br>";
+            mensaje += "Cantidad de múltiplos de 15: " + mul15 + "<br>";
+            mensaje += "Suma de números pares: " + numPar + "<br>";
+            return mensaje;
+        }
+        // Calcular-Mostrar Resultados
+        document.write(valoresTabla());
+    </script>
+</body>
+</html>

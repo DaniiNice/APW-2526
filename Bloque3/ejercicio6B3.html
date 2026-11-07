@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TXT</title>
+</head>
+<body>
+    <select id="pizza">
+        <option value="4">Queso</option>
+        <option value="6">Jamón y queso</option>
+        <option value="10">Especial</option>
+    </select>
+    <input type="text" id="cantidad" placeholder="Cantidad">
+    <input type="text" id="total" placeholder="Precio">
+    <button onclick="calcular()">Calcular</button>
+    <script>
+        function calcular() {
+            let precio = parseInt(document.getElementById("pizza").value);
+            let cant = parseInt(document.getElementById("cantidad").value);
+            document.getElementById("total").value = precio * cant;
+        }
+    </script>
+</body>
+</html>

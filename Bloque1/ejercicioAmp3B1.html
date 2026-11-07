@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+</head>
+<body>
+    <script>
+        // Funciones
+        function clasificarTriangulo(l1, l2, l3) {
+            let resultado;
+            if ((l1 + l2 > l3) && (l1 + l3 > l2) && (l2 + l3 > l1)) {
+                if (l1 === l2 && l2 === l3) {
+                    resultado = "Equilátero";
+                } else if (l1 === l2 || l1 === l3 || l2 === l3) {
+                    resultado = "Isósceles";
+                } else {
+                    resultado = "Escaleno";
+                }
+            } else {
+                    resultado = "No es un triángulo";
+            }
+            return resultado;
+        }
+        // Leer
+        let l1 = parseFloat(prompt("Ingrese la primera longitud:"));
+        let l2 = parseFloat(prompt("Ingrese la segunda longitud:"));
+        let l3 = parseFloat(prompt("Ingrese la tercera longitud:"));
+        // Calcular-Mostrar resultados
+        let resultado = clasificarTriangulo(l1, l2, l3);
+        document.write("Resultado: " + resultado);
+    </script>
+</body>
+</html>

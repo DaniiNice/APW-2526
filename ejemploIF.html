@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+    // Leer
+    let A, B, C;
+    A = parseInt(prompt('Ingrese 1er. número:'));
+    B = parseInt(prompt('Ingrese 2do. número:'));
+    C = parseInt(prompt('Ingrese 3er. número:'));
+
+    // Verificar si son iguales
+    if (A === B || A === C || B === C) {
+        document.write('ERROR: Deben ser valores diferentes');
+    } else {
+        let alto = A;
+        let bajo = A;
+
+        // Comparar con B
+        if (B > alto) {
+            alto = B;
+        } else if (B < bajo) {
+            bajo = B;
+        }
+
+        // Comparar con C
+        if (C > alto) {
+            alto = C;
+        } else if (C < bajo) {
+            bajo = C;
+        }
+
+        document.write(alto + ' es el mayor y ' + bajo + ' es el menor');
+    }
+</script>
+
+</body>
+</html>

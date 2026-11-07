@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sueldo</title>
+</head>
+<body>
+
+<script>
+  // Leer
+  let sueldo = parseFloat(prompt("Ingrese el sueldo del operario:"));
+  let antiguedad = parseInt(prompt("Ingrese los años de antigüedad:"));
+  // Calcular-Mostrar resultados
+  if (sueldo < 500 && antiguedad >= 10) {
+    sueldo = sueldo + (sueldo * 0.20);
+    document.write("Se aplica un aumento del 20% <br>");
+    document.write("Sueldo a pagar: " + sueldo.toFixed(2));
+  } else if (sueldo < 500 && antiguedad < 10) {
+    sueldo = sueldo + (sueldo * 0.05);
+    document.write("Se aplica un aumento del 5%");
+    document.write("<br>");
+    document.write("Sueldo a pagar: " + sueldo.toFixed(2));
+  } else {
+    document.write("El sueldo no cambia");
+    document.write("<br>");
+    document.write("Sueldo a pagar: " + sueldo.toFixed(2));
+  }
+</script>
+
+</body>
+</html>

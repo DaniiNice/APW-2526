@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <select onchange="mostrarPrecio(this.value)">
+        <option value="0">Seleccione</option>
+        <option value="5">Jamón y Queso</option>
+        <option value="4">Muzzarella</option>
+        <option value="6">Morrones</option>
+    </select>
+    <input type="text" id="precio">
+    <script>
+        function mostrarPrecio(precio) {
+        document.getElementById("precio").value = precio;
+        }
+    </script>
+</body>
+</html>

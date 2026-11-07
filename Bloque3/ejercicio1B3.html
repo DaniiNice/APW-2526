@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector</title>
+</head>
+<body>
+    <script>
+        function procesarVector() {
+        let vec = [];
+        let sumaTotal = 0;
+        let sumaMayor36 = 0;
+        let contMayor50 = 0;
+        for (let i = 0; i < 8; i++) {
+            vec[i] = parseInt(prompt("Ingrese el valor " + (i+1)));
+            sumaTotal += vec[i];
+        if (vec[i] > 36) {
+            sumaMayor36 += vec[i];
+            }
+        if (vec[i] > 50) {
+            contMayor50++;
+            }
+        }
+        document.write("Suma total: " + sumaTotal + "<br>");
+        document.write("Suma mayores a 36: " + sumaMayor36 + "<br>");
+        document.write("Cantidad mayores a 50: " + contMayor50 + "<br>");
+        }
+        procesarVector();
+    </script>
+</body>
+</html>

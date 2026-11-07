@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do/While</title>
+</head>
+<body>
+    <script>
+        // Funciones-Leer
+        function sumaValor() {
+            let acu = 0;
+            let num;
+            do {
+                num = parseInt(prompt('Ingresa un valor (9999 para terminar)'));
+                if (num !== 9999) {
+                    acu = acu + num;   
+                }
+            } while (num !== 9999);
+            document.write('La suma acumulada es ' + acu + '<br>');
+            if (acu == 0) {
+                document.write('El valor es 0');
+            } else if (acu > 0) {
+                document.write('El valor es mayor que 0');
+            } else {
+                document.write('El valor es menor a 0');
+            }
+        }
+        // Calcular-Mostrar Resultados
+        sumaValor();
+    </script>
+</body>
+</html>

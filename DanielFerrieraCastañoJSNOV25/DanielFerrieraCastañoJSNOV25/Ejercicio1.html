@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Entero</title>
+</head>
+<body>
+    <script>
+        // Funciones-Leer
+        function calcularFactorial() {
+            let num2, num = parseInt(prompt("Ingrese un número entero positivo"));
+            if (num != NaN && num > 0 && Number.isInteger(num) === true) {
+                num2 = num*4*3*2*1;
+                document.write("El factorial de " + num + " es " + num2);
+            } else {
+                alert("Error: Tiene que ser positivo");
+            }
+        }
+        // Mostrar-Calcular Resultados
+        calcularFactorial();
+    </script>
+</body>
+</html>

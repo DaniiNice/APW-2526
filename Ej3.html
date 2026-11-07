@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej JavaScript</title>
+</head>
+<body>
+    <script>
+        // Leer
+        let notas, N, cont, suma, promedio, nota;
+
+        // Le pedimos las notas y ponemos el contador a 0
+        notas = parseInt(prompt('Ingrese las notas (0 para teminar):'));
+        cont = 0;
+        suma = 0;
+
+        /* Si la nota es mayor que 0, se escribe la nota, sigue pidiendo notas aumentando 
+        el contador y una vez se termine calculara el promedio de dichas notas */
+        while (notas > 0) {
+            document.write('Nota: ' + notas);
+            document.write('<br>');
+            cont = cont + 1;
+            suma = suma + notas;
+            notas = parseInt(prompt('Ingrese las notas (0 para teminar):'));
+                if (notas == 0) {
+                promedio = suma / cont;
+                document.write('El promedio es ' + promedio);
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+</head>
+<body>
+    <input type="radio" name="edad" value="si"> Mayor de 18
+    <input type="radio" name="edad" value="no"> Menor de 18
+    <button onclick="verificar()">Ingresar</button>
+    <script>
+        function verificar() {
+        let radios = document.getElementsByName("edad");
+        if (radios[0].checked) {
+            alert("Puede ingresar");
+        } else {
+            alert("No puede ingresar");
+            }
+        }
+    </script>
+</body>
+</html>

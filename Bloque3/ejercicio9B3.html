@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+</head>
+<body>
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="text" id="mail" placeholder="Mail"><br>
+    <textarea id="comentarios" placeholder="Comentarios"></textarea><br>
+    <button onclick="mostrar()">Enviar</button>
+    <script>
+        function mostrar() {
+        let n = nombre.value;
+        let m = mail.value;
+        let c = comentarios.value;
+        alert("Nombre: " + n + "\nMail: " + m + "\nComentarios: " + c);
+        }
+    </script>
+</body>
+</html>

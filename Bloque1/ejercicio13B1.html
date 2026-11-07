@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El "&&"</title>
+</head>
+<body>
+    <script>
+        // Leer
+        let A = parseFloat(prompt("Ingrese el primer valor:"));
+        let B = parseFloat(prompt("Ingrese el segundo valor:"));
+        let C = parseFloat(prompt("Ingrese el tercer valor:"));
+        // Calcular-Mostrar resultados
+        if (A == B && B == C) {
+            let resultado = (A + B) * C;
+            document.write("Los tres valores son iguales");
+            document.write("<br>");
+            document.write("El resultado de la operacion es: " + resultado);
+        } else {
+            document.write("Los valores no son todos iguales");
+        }
+    </script>
+</body>
+</html>

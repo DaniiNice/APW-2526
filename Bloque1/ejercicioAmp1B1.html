@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponente</title>
+</head>
+<body>
+    <script>
+        // Funciones
+        function calcularPotencia(base, exponente) {
+            return base ** exponente;
+        }
+        // Leer
+        let base = parseFloat(prompt("Ingrese la base:"));
+        let exponente = parseInt(prompt("Ingrese el exponente (positivo):"));
+        while (exponente < 0) {
+            exponente = parseInt(prompt("Error: Ingrese un exponente positivo:"));
+        }
+        // Calcular-Mostrar resultados
+        let resultado = calcularPotencia(base, exponente);
+        document.write("La base " + base + " elevada al exponente " + exponente + " es: " + resultado);
+    </script>
+</body>
+</html>

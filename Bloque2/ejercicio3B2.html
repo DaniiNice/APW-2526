@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sueldos</title>
+</head>
+<body>
+    <script>
+        // Funciones
+        function calcularSueldo (mon1, mon2, mon3, mon4, mon5) {
+            let result = '';
+            let contadormayor = 0;
+            let contadormenor = 0;
+            let importe = mon1 + mon2 + mon3 + mon4 + mon5;
+            if (mon1 >= 100 && mon1 <= 500 && // Comprobamos si esta entre 100
+                mon2 >= 100 && mon2 <= 500 &&
+                mon3 >= 100 && mon3 <= 500 &&
+                mon4 >= 100 && mon4 <= 500 && 
+                mon5 >= 100 && mon5 <= 500) {
+                if (mon1 <= 300) contadormenor++; else contadormayor++; // Comprobamos si es menor, mayor o igual a 300
+                if (mon2 <= 300) contadormenor++; else contadormayor++; // Y lo guardamos en contadores
+                if (mon3 <= 300) contadormenor++; else contadormayor++;
+                if (mon4 <= 300) contadormenor++; else contadormayor++;
+                if (mon5 <= 300) contadormenor++; else contadormayor++;
+                result = 'Hay ' + contadormenor + ' empleados que cobran entre $100 a $300. <br> Hay ' + contadormayor 
+                + ' empleados que cobran más de $300. <br> El importe que tiene que pagar la empresa $' + importe + '.';
+            } else {
+                result = 'Error: Tiene que ser entre $100 a $500';
+            }
+            return result;
+        }
+        // Leer
+        let mon1, mon2, mon3, mon4, mon5;
+        mon1 = parseInt(prompt('Ingrese el sueldo 1 entre $100 a $500'));
+        mon2 = parseInt(prompt('Ingrese el sueldo 2 entre $100 a $500'));
+        mon3 = parseInt(prompt('Ingrese el sueldo 3 entre $100 a $500'));
+        mon4 = parseInt(prompt('Ingrese el sueldo 4 entre $100 a $500'));
+        mon5 = parseInt(prompt('Ingrese el sueldo 5 entre $100 a $500'));
+        // Calcular-Mostrar resultados
+        document.write(calcularSueldo(mon1, mon2, mon3, mon4, mon5));
+    </script>
+</body>
+</html>

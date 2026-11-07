@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check</title>
+</head>
+<body>
+    <input type="checkbox" id="futbol">Fútbol
+    <input type="checkbox" id="basket">Básket
+    <input type="checkbox" id="tenis">Tenis
+    <button onclick="mostrarDeportes()">Mostrar</button>
+    <script>
+        function mostrarDeportes() {
+        let res = "";
+        if (futbol.checked) res += "Fútbol ";
+        if (basket.checked) res += "Básket ";
+        if (tenis.checked) res += "Tenis ";
+        alert(res);
+        }
+    </script>
+</body>
+</html>

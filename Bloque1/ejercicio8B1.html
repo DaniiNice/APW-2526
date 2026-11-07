@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    <script>
+        // Funciones
+        function comprobarNota(nota) {
+            return (nota >= 0 && nota <= 10)
+        }
+        
+        function calcularPromedio(nota1, nota2, nota3) {
+            let promedio, grado;
+            promedio = (nota1 + nota2 + nota3) / 3;
+            if (promedio >= 4) {
+                grado = 'regular'
+            } else {
+                grado = 'reprobado'
+            }
+            return grado;
+        }
+
+        // Leer
+        let nota1, nota2, nota3, resultado;
+        nota1 = parseFloat(prompt('Ingrese una nota'));
+        nota2 = parseFloat(prompt('Ingrese otra nota'));
+        nota3 = parseFloat(prompt('Ingrese otra nota'));
+
+        // Calcular-Mostrar resultados
+        if (comprobarNota(nota1) && comprobarNota(nota2) && comprobarNota(nota3)) {
+            resultado = calcularPromedio(nota1, nota2, nota3);
+            document.write(resultado);
+        } else {
+            document.write("Error: Las notas deben estar entre 0 y 10.");
+        }
+    </script>
+</body>
+</html>

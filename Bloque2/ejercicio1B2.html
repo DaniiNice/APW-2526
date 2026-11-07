@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabras</title>
+</head>
+<body>
+    <script>
+        // Funciones
+        function encontrarPalabra(pal) {
+            let ing;
+            switch (pal.toLowerCase()) {
+                case "casa": ing = "house"; break;
+                case "mesa": ing = "table"; break;
+                case "perro": ing = "dog"; break;
+                case "gato": ing = "cat"; break;
+            }
+            return ing;
+        }
+        // Calcular-Mostrar resultados
+        let pal = prompt('Ingrese casa, mesa, perro o gato');
+        document.write(encontrarPalabra(pal));
+    </script>
+</body>
+</html>

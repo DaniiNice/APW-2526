@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edades</title>
+</head>
+<body>
+    <h1>Daniel Marcos Ferreira Castaño</h1>
+    <p>Estudiantes:</p>
+    <script>
+        // Funciones-Leer
+        function edadesEstudiantes() {
+            let mañana="", num1=0, tarde="",num2=0, noche="",num3=0, edad = 0, cont = 1, cont2 = 1, prome1, prome2, prome3, promeMay;
+            do {
+                edad = parseInt(prompt('Ingresa la edad del estudiante ' + cont + ' del turno mañana'));
+                cont++;
+                if (edad >= 6 && edad <= 80) {
+                    mañana += "Estudiante " + cont2 + " del turno mañana:" + edad + "<br>";
+                    cont2++;
+                    num1 += edad;
+                } else {
+                    alert("Error: Tiene que estar entre 6 a 80 años");
+                    cont--;
+                } 
+            } while (cont <= 2);
+            cont = 1;
+            cont2 = 1;
+            edad = 0;
+            do {
+                edad = parseInt(prompt('Ingresa la edad del estudiante ' + cont + ' del turno tarde'));
+                cont++
+                if (edad >= 6 && edad <= 80) {
+                    tarde += "Estudiante " + cont2 + " del turno tarde:" + edad + "<br>";
+                    cont2++;
+                    num2 += edad;
+                } else {
+                    alert("Error: Tiene que estar entre 6 a 80 años");
+                    cont--
+                } 
+            } while (cont <= 3);
+            cont = 1;
+            cont2 = 1;
+            edad = 0;
+            do {
+                edad = parseInt(prompt('Ingresa la edad del estudiante ' + cont + ' del turno noche'));
+                cont++;
+                if (edad >= 6 && edad <= 80) {
+                    noche += "Estudiante " + cont2 + " del turno noche:" + edad + "<br>";
+                    cont2++;
+                    num3 += edad;
+                } else {
+                    alert("Error: Tiene que estar entre 6 a 80 años");
+                    cont--;
+                } 
+            } while (cont <= 4);
+            prome1 = num1++ / 2;
+            prome2 = num2++ / 3;
+            prome3 = num3++ / 4;
+            if (prome1 > prome2 && prome1 > prome3) {
+                promeMay = prome1;
+            } else if (prome2 > prome1 && prome2 > prome3) {
+                promeMay = prome2;
+            } else {
+                promeMay = prome3;
+            }
+            document.write(mañana + "<br>" + tarde + "<br>" + noche + "<br>");
+            document.write("<p>Promedio de las edades</p>");
+            document.write("Del turno mañana:" + prome1.toFixed(2) + "<br>");
+            document.write("Del turno tarde:" + prome2.toFixed(2) + "<br>");
+            document.write("Del turno noche:" + prome3.toFixed(2) + "<br>");
+            document.write("El mas mayor es:" + promeMay.toFixed(2));
+        }
+        // Calcular-Mostrar Resultados
+        edadesEstudiantes();
+    </script>
+</body>
+</html>

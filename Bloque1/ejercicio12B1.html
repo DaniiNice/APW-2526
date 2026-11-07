@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitos2</title>
+</head>
+<body>
+    <script>
+        // Leer el número
+        let numero = parseInt(prompt("Ingrese un número entero positivo (1 a 999):"));
+        // Calcular-Mostrar resultados
+        if (numero < 1 || numero > 999) {
+            document.write("El número está fuera del rango permitido (1 a 999)");
+        } else {
+            if (numero < 10) {
+                document.write("El número tiene 1 cifra");
+        } else if (numero < 100) {
+                document.write("El número tiene 2 cifras");
+        } else {
+            document.write("El número tiene 3 cifras");
+        }
+    }
+    </script>
+</body>
+</html>
